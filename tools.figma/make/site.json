@@ -1,0 +1,11 @@
+{
+  "title": "MadhuSmriti",
+  "description": "Offers users a streamlined dashboard to track achievements, view data insights, manage projects, and access key information efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
