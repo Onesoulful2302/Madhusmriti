@@ -203,7 +203,7 @@ function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-mono px-3 py-1 rounded-full mb-6">
             <span className="w-1.5 h-1.5 bg-amber-400 rounded-full animate-pulse" />
-            Smart India Hackathon 2026 · Prototype Demo
+            
           </div>
 
           <h1 className="text-5xl lg:text-6xl font-light text-white leading-tight mb-4" style={{ fontFamily: "Fraunces, serif" }}>
@@ -1067,7 +1067,7 @@ function Footer() {
               <span className="text-amber-300 font-semibold" style={{ fontFamily: "Fraunces, serif" }}>MadhuSmriti</span>
             </div>
             <p className="text-amber-500 text-xs max-w-xs leading-relaxed">
-              A honey quality verification and supply-chain traceability prototype developed for Smart India Hackathon 2026.
+              A honey quality verification and supply-chain traceability prototype.
             </p>
           </div>
           <div className="text-xs text-amber-600 space-y-1">
@@ -1078,7 +1078,7 @@ function Footer() {
           </div>
         </div>
         <div className="border-t border-amber-800/50 pt-4 flex flex-wrap justify-between gap-2">
-          <p className="text-xs text-amber-700 font-mono">MadhuSmriti · Smart India Hackathon 2026 · Prototype</p>
+          <p className="text-xs text-amber-700 font-mono">MadhuSmriti  · Prototype</p>
           <p className="text-xs text-amber-700">माधुस्मृति — From Hive to Home</p>
         </div>
       </div>
