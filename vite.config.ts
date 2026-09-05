@@ -7,7 +7,7 @@ import siteConfiguration from './tools.figma/make/site.json'
 
 // Vite config — https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // .figma/make/deploy-preview passes `--mode development` for cached-preview builds.
+  // .tools.figma/make/deploy-preview passes `--mode development` for cached-preview builds.
   const emitSourcemaps = mode === 'development'
 
   return {
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => {
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
       port: parseInt(process.env.PORT || '8443'),
       strictPort: true,
-      watch: { ignored: ['**/.figma/**'] },
+      watch: { ignored: ['**/tools.figma/**'] },
     },
     preview: {
       host: process.env.FIGMA_DEV_SERVER_HOST || '0.0.0.0',
@@ -175,7 +175,7 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
             {
               tag: 'style',
               children: `
-  .figma-bypass-link {
+  tools.figma-bypass-link {
     position: fixed;
     top: 8px;
     left: 8px;
@@ -188,7 +188,7 @@ function figmaSiteConfiguration(config: FigmaSiteConfiguration): Plugin {
     font: 600 14px/1.2 system-ui, sans-serif;
     text-decoration: none;
   }
-  .figma-bypass-link:focus {
+  tools.figma-bypass-link:focus {
     transform: translateY(0);
   }
 `,
@@ -308,7 +308,7 @@ function figmaReactRefreshBoundaryFallback(): Plugin {
  */
 function figmaMakeKitPlugin(options: { storiesGlob: string | string[] }): Plugin {
   const storiesGlob = Array.isArray(options.storiesGlob) ? options.storiesGlob : [options.storiesGlob]
-  const ROUTE = '/.figma/make/kit.html'
+  const ROUTE = '/tools.figma/make/kit.html'
   const VIRTUAL_ID = 'virtual:figma-stories'
   const RESOLVED_ID = '\0' + VIRTUAL_ID
   const STORIES_MODULE = `export const stories = import.meta.glob(${JSON.stringify(storiesGlob)})`
